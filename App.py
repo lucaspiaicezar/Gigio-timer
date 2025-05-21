@@ -1,12 +1,10 @@
-import streamlit as st 
+import streamlit as st
 import random
 
 st.set_page_config(page_title="Simulador do Gigio", page_icon="⏱️", layout="centered")
 
 # Estilo com base na paleta do ícone
-
 st.markdown("""
-
 <style>
     body {
         background-color: #FFE082;
@@ -31,28 +29,26 @@ st.markdown("""
         background-color: #FFF3E0;
         color: #3E2723;
     }
-</style>""", unsafe_allow_html=True)
+</style>
+""", unsafe_allow_html=True)
 
 # Ícone do Gigio
-
 st.image("gigio_icon.png", width=180)
 
 st.markdown("<div class='big-font'>⏱️ <b>Simulador de Atraso do Gigio</b></div>", unsafe_allow_html=True)
 
-st.write(""" Gigio sempre diz que vai entrar na call em alguns minutos... mas nunca cumpre! Use esta ferramenta para estimar quanto tempo ele realmente vai demorar.
+st.write("""
+Gigio sempre diz que vai entrar na call em alguns minutos... mas nunca cumpre!
+Use esta ferramenta para estimar quanto tempo ele realmente vai demorar.
 
-Fórmula usada:
-
-> Tempo Real = Tempo Prometido × R + A
-
-
-
-R: Fator aleatório de erro (2 a 5)
-
-A: Ajuste por distração (5 a 15 minutos) """)
-
+**Fórmula usada:**
+> Tempo Real = Tempo Prometido × R + A  
+- R: Fator aleatório de erro (2 a 5)  
+- A: Ajuste por distração (5 a 15 minutos)
+""")
 
 tempo_prometido = st.number_input("Digite o tempo prometido pelo Gigio (em minutos):", min_value=1, max_value=120, value=10, step=1)
+
 if st.button("Calcular Tempo Real Estimado"):
     r = round(random.uniform(2, 5), 2)
     a = random.randint(5, 15)
@@ -65,4 +61,3 @@ if st.button("Calcular Tempo Real Estimado"):
         st.markdown(f"- Fator de erro (R): **{r}**")
         st.markdown(f"- Ajuste de distração (A): **{a} min**")
         st.markdown(f"- Fórmula aplicada: **{tempo_prometido} × {r} + {a} = {tempo_real} min**")
-
