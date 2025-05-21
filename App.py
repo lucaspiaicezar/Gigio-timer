@@ -33,7 +33,7 @@ st.markdown("""
     }
 </style>""", unsafe_allow_html=True)
 
-Ícone do Gigio
+# Ícone do Gigio
 
 st.image("gigio_icon.png", width=180)
 
