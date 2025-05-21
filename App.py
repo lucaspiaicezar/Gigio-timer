@@ -53,14 +53,16 @@ A: Ajuste por distração (5 a 15 minutos) """)
 
 
 tempo_prometido = st.number_input("Digite o tempo prometido pelo Gigio (em minutos):", min_value=1, max_value=120, value=10, step=1)
+if st.button("Calcular Tempo Real Estimado"):
+    r = round(random.uniform(2, 5), 2)
+    a = random.randint(5, 15)
+    tempo_real = round(tempo_prometido * r + a)
 
-if st.button("Calcular Tempo Real Estimado"): r = round(random.uniform(2, 5), 2) a = random.randint(5, 15) tempo_real = round(tempo_prometido * r + a)
+    st.success(f"🕒 O Gigio provavelmente vai entrar em **{tempo_real} minutos**")
 
-st.success(f"🕒 O Gigio provavelmente vai entrar em **{tempo_real} minutos**")
-
-with st.expander("Ver detalhes do cálculo"):
-    st.markdown(f"- Tempo prometido: **{tempo_prometido} min**")
-    st.markdown(f"- Fator de erro (R): **{r}**")
-    st.markdown(f"- Ajuste de distração (A): **{a} min**")
-    st.markdown(f"- Fórmula aplicada: **{tempo_prometido} × {r} + {a} = {tempo_real} min**")
+    with st.expander("Ver detalhes do cálculo"):
+        st.markdown(f"- Tempo prometido: **{tempo_prometido} min**")
+        st.markdown(f"- Fator de erro (R): **{r}**")
+        st.markdown(f"- Ajuste de distração (A): **{a} min**")
+        st.markdown(f"- Fórmula aplicada: **{tempo_prometido} × {r} + {a} = {tempo_real} min**")
 
