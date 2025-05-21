@@ -3,7 +3,7 @@ import random
 
 st.set_page_config(page_title="Simulador do Gigio", page_icon="⏱️", layout="centered")
 
-Estilo com base na paleta do ícone
+# Estilo com base na paleta do ícone
 
 st.markdown("""
 
