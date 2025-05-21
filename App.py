@@ -1,9 +1,8 @@
-import streamlit as st 
-import random
+import streamlit as st import random
 
-st.markdown("<h1 style='text-align: center;'>⏰</h1>", unsafe_allow_html=True)
-st.image("gigio_icon.png", width=180)
 st.set_page_config(page_title="Simulador do Gigio", page_icon="⏱️", layout="centered")
+
+Estilo com base na paleta do ícone
 
 st.markdown("""
 
@@ -32,6 +31,8 @@ st.markdown("""
         color: #3E2723;
     }
 </style>""", unsafe_allow_html=True)
+
+Ícone do Gigio
 
 st.image("gigio_icon.png", width=180)
 
