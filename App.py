@@ -1,4 +1,5 @@
-import streamlit as st import random
+import streamlit as st 
+import random
 
 st.markdown("<h1 style='text-align: center;'>⏰</h1>", unsafe_allow_html=True)
 st.image("gigio_icon.png", width=180)
