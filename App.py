@@ -1,4 +1,5 @@
-import streamlit as st import random
+import streamlit as st 
+import random
 
 st.set_page_config(page_title="Simulador do Gigio", page_icon="⏱️", layout="centered")
 
