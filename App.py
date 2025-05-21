@@ -1,5 +1,7 @@
 import streamlit as st import random
 
+st.markdown("<h1 style='text-align: center;'>⏰</h1>", unsafe_allow_html=True)
+st.image("gigio_icon.png", width=180)
 st.set_page_config(page_title="Simulador do Gigio", page_icon="⏱️", layout="centered")
 
 st.markdown("""
